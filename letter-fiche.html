@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettercatalogus</title>
+    <link rel="stylesheet" href="assets/css/collectie.css">
+</head>
+
+<body>
+
+    <div id="carousel-container">
+        <div id="data-container"></div>
+        <div class="navigate">
+            <button class="prev">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(-180 40 40)" fill="black" />
+                    <path d="M24 10L12 20L24 30" stroke="white" stroke-width="2" stroke-linecap="square" />
+                </svg>
+            </button>
+            <button class="overview">
+                <a href="index.html">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="50" height="50" rx="25" fill="black" />
+                        <path d="M22.3333 13H13V22.3333H22.3333V13Z" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M37 13H27.6667V22.3333H37V13Z" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M37 27.6667H27.6667V37H37V27.6667Z" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M22.3333 27.6667H13V37H22.3333V27.6667Z" stroke="white" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </a>
+            </button>
+            <button class="next">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path d="M16 30L28 20L16 10" stroke="white" stroke-width="2" stroke-linecap="square" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/fiche.js"></script>
+
+    <script>
+        document.body.addEventListener('wheel', function (e) {
+            const scroller = e.target.closest('.x-scroll');
+            if (!scroller) return;
+
+            if (e.deltaY !== 0) {
+                e.preventDefault();
+                scroller.scrollLeft += e.deltaY;
+            }
+        }, { passive: false });
+
+    </script>
+
+</body>
+</html>

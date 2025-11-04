@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gedigitaliseerde houten lettercollectie van het industriemuseum">
+    <title>Industriemuseum - Houten lettercollectie</title>
+    <link rel="icon" type="image/x-icon" href="assets/touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="assets/css/collectie.css">
+</head>
+
+<body class="no-scroll">
+
+    <div id="collection-container" class="filters-hidden">
+        <div class="sidebar">
+            <div id="logo">
+                <a href="https://www.industriemuseum.be/" target="_blank">
+                    <img src="assets/logo_industriemuseum.svg">
+                </a>
+            </div>
+
+            <div id="cta-container">
+                <p><b>Scrol</b> door de houten lettercollectie of <b>filter</b> op type. <b>Tik</b> op de proefdrukken
+                    om meer informatie te zien.</p>
+            </div>
+            <button class="filter-toggle">Filter op type</button>
+            <div id="filter-container">
+                <h4>Filter op type</h4>
+                <div id="filter-list"></div>
+                <button>Reset Filter</button>
+            </div>
+        </div>
+        <div id="proef-wrapper">
+            <div id="proef-container"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/catalog.js" defer></script>
+
+</body>
+
+</html>
